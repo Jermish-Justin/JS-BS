@@ -1,0 +1,8 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+.navbar-custom {
+  background-color: #a1a0a4;
+  max-height: 40px;
+}
