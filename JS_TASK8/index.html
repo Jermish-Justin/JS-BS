@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS_TASK8</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      type="text/css"
+    />
+  </head>
+  <body>
+    <div class="container w-50" style="background: linear-gradient(0deg, #cb84b1, #f3e9bd);">
+      <center>
+        <form
+          class="form mt-2 gap-2"
+          style="font-size: small;"
+        >
+          <h3 class="my-2">Registration form</h3>
+          <table>
+            <tr>
+              <td><label for="fname" class="form-label">First Name</label></td>
+              <td>
+                <input
+                  type="text"
+                  name="fname"
+                  id="fname"
+                  class="form-control"
+                  onkeyup="checkStrength_fname()"
+                />
+              </td>
+              <td>
+                <b>
+                    <span id="msg1" class="mx-2 text-danger">POOR</span>
+                </b>  
+            </td>
+            </tr>
+            <tr>
+              <td><label for="lname" class="form-label">Last Name</label></td>
+              <td>
+                <input
+                  type="text"
+                  name="lname"
+                  id="lname"
+                  class="form-control"
+                  onkeyup="checkStrength_lname()"
+                />
+              </td>
+              <td>
+                <b>
+                    <span id="msg2" class="mx-2 text-danger">POOR</span>
+                </b>  
+            </td>
+            </tr>
+            <tr>
+              <td><label for="email" class="form-label">Email</label></td>
+              <td>
+                <input
+                  type="email"
+                  name="em"
+                  id="email"
+                  class="form-control"
+                  onkeyup="checkStrength_email()"
+                />
+              </td>
+              <td>
+                <b>
+                    <span id="msg3" class="mx-2 text-danger">POOR</span>
+                </b>  
+            </td>
+            </tr>
+            <tr>
+              <td><label for="pw" class="form-label">Password</label></td>
+              <td>
+                <input type="password" name="pw" id="pw" class="form-control" onkeyup="checkStrength_pw()"/>
+              </td>
+              <td>
+                <b>
+                    <span id="msg4" class="mx-2 text-danger">POOR</span>
+                </b>  
+            </td>
+            </tr>
+            <tr>
+              <td>
+                <label for="r-pw" class="form-label">Re-enter Password</label>
+              </td>
+              <td>
+                <input
+                  type="password"
+                  name="r-pw"
+                  id="pw"
+                  class="form-control"
+                  onkeyup="checkStrength_rpw()"
+                />
+              </td>
+              <td>
+                <b>
+                    <span id="msg5" class="mx-2 text-danger">POOR OR MISMATCH</span>
+                </b>  
+            </td>
+
+            </tr>
+            <tr>
+              <td><label for="gender" class="form-label">Gender</label></td>
+              <td>
+                <input type="radio" name="gender" id="male" />Male
+                <br />
+                <input type="radio" name="gender" id="female" />Female
+              </td>
+              <td></td>
+            </tr>
+            <tr>
+              <td><label for="age" class="form-label">Age</label></td>
+              <td>
+                <input type="number" name="age" id="age" 
+                onkeyup="checkStrength_age()"
+                class="form-control" />
+              </td>
+              <td>
+                <b>
+                    <span id="msg6" class="mx-2 text-danger">POOR</span>
+                </b>  
+            </td>
+
+            </tr>
+            <tr>
+              <td><label for="phno" class="form-label">Phone Number</label></td>
+              <td>
+                <input 
+                onkeyup="checkStrength_phno()"
+                type="tel" name="phno" id="phno" class="form-control" />
+              </td>
+              <td>
+                <b>
+                    <span id="msg7" class="mx-2 text-danger">POOR</span>
+                </b>  
+            </td>
+
+            </tr>
+            <tr>
+              <td><label for="address" class="form-label">Address</label></td>
+              <td>
+                <textarea
+                  name="address"
+                  id="add"
+                  cols="23"
+                  rows="2"
+                  class="form-control"
+                  onkeyup="checkStrength_add()"
+                ></textarea>
+              </td>
+              <td>
+                <b>
+                    <span id="msg8" class="mx-2 text-danger">POOR</span>
+                </b>  
+            </td>
+
+            </tr>
+            <tr>
+              <td><label for="st" class="form-label">State</label></td>
+              <td>
+                <input onkeyup="checkStrength_st()" type="text" name="st" id="state" class="form-control" />
+              </td>
+              <td>
+                <b>
+                    <span id="msg9" class="mx-2 text-danger">POOR</span>
+                </b>  
+            </td>
+
+            </tr>
+            <tr>
+              <td><label for="country" class="form-label">Country</label></td>
+              <td>
+                <select name="country" id="cnt" class="form-control">
+                  <option value="invalid">Choose your country</option>
+                  <option value="Country 1">Country 1</option>
+                  <option value="country 2">Country 2</option>
+                  <option value="country 3">Country 3</option>
+                </select>
+              </td>
+
+            </tr>
+            <tr>
+              <td>
+                <label for="lang" class="form-label">languages known</label>
+              </td>
+              <td>
+                <input type="checkbox" name="lang" id="eng" />
+                English
+                <input type="checkbox" name="lang" id="kan" />
+                Kannada
+                <input type="checkbox" name="lang" id="hin" />
+                Hindi
+                <input type="checkbox" name="lang" id="tel" />
+                Telugu
+              </td>
+            </tr>
+          </table>
+        </form>
+        <div class="my-3" style="font-size: small">
+          <span>Log in to <a href="wwww.ethnus.com">Ethnus</a> Website</span>
+        </div>
+        <div style="font-size: small">
+          <button class="btn btn-danger btn-sm mb-3">Register</button>
+        </div>
+        </div>
+      </center>
+    
+
+    <script src="./script.js"></script>
+  </body>
+</html>

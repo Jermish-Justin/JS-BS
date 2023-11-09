@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS TASK1</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      type="text/css"
+    />
+  </head>
+  <body>
+    <center>
+      <div class="w-25 mt-5">
+        <input
+          type="number"
+          name="num"
+          id="n"
+          placeholder="Enter the number"
+          class="form-control my-3"
+        />
+        <button class="btn btn-primary" onclick="return reverse_number()">
+          Reverse
+        </button>
+        <p class="fs-5 my-4">
+          <span id="result"></span>
+        </p>
+      </div>
+    </center>
+    <script>
+      function reverse_number() {
+        let num1 = document.getElementById("n").value;
+        let result = num1.toString().split("").reverse().join("");
+        document.getElementById("result").innerHTML =
+          "The reversed number is: " + result;
+      }
+    </script>
+  </body>
+</html>
